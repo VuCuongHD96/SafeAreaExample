@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let topAnchor = contentView.safeAreaLayoutGuide.layoutFrame.maxY
+        
+        let top    = UIApplication.shared.windows[0].safeAreaInsets.top
+        print("----- debug ----- top = ", top)
     }
-
-
 }
-
